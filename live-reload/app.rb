@@ -2,7 +2,7 @@ require "sinatra/base"
 
 class App < Sinatra::Base
   get '/' do
-    erb "<head></head>Hello World"
+   erb :index
   end
 end
 

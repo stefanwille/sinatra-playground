@@ -14,4 +14,4 @@ rackup
 
 6. Enable the LiveReload plugin in Chrome
 
-Then you can change app.rb and see live reloads in Chrome
+Then you can change your views and see live reloads in Chrome, without having to click 'Reload'.
