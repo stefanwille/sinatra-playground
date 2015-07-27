@@ -1,11 +1,12 @@
 require "sinatra/base"
 require 'tilt/erubis'
 
-enable :sessions
-
-set :erb, escape_html: true
 
 class App < Sinatra::Base
+  enable :sessions
+
+  set :erb, escape_html: true
+
   get '/' do
     erb :index
   end
@@ -17,18 +18,30 @@ class App < Sinatra::Base
   end
 
   post '/create' do
-    name = params[:name]
-    email = params[:email]
-    redirect to("/show?name=#{name}&email=#{email}")
+    session[:name] = params[:name]
+    session[:email] = params[:email]
+    redirect to("/show")
   end
 
   get '/show' do
+
     user = {
-      name: params['name'],
-      email: params['email']
+      name: session[:name],
+      email: session[:email]
     }
 
     erb :show, locals: {user: user}
+  end
+
+  get '/session' do
+    @name = session[:name]
+    @value = session[:value]
+
+    if @name
+      session[@name] = @value
+    end
+
+    erb :session
   end
 end
 
