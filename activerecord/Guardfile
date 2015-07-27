@@ -1,0 +1,10 @@
+
+guard 'rack' do
+  watch('Gemfile.lock')
+  watch(%r{\.rb$})
+end
+
+guard 'bundler' do
+  watch('Gemfile')
+end
+
