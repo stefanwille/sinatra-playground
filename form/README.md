@@ -1,4 +1,4 @@
-# Sinatra with LiveReload
+# Sinatra Form Example
 
 1. Run your LiveReload server
 
@@ -15,3 +15,4 @@ rackup
 6. Enable the LiveReload plugin in Chrome
 
 Then you can change your views and see live reloads in Chrome, without having to click 'Reload'.
+

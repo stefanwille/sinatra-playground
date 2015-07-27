@@ -1,9 +1,6 @@
 require 'sinatra'
-
 require 'erubis'
-set :erb, :escape_html => true
 
-enable :sessions
 
 get '/' do
   session[:counter] ||= 0
