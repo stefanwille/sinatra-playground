@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.css">
+</head>
+<style type="text/css">
+  @media only screen and (min-width: 40em) {
+  .top-bar {
+    text-align: center; }
+
+  ul.center-buttons {
+    display: inline-block; }
+
+  .logo {
+    left: 5px;
+    top: -2px;
+    position: absolute; } }
+.logo {
+  max-width: 2rem;
+  margin-top: -3px;
+  margin-left: 5px; }
+
+.menu-icon {
+  padding-top: 1.2rem; }
+
+.top-bar.expanded {
+  background: #333333; }
+
+.logo {
+  margin-top: .5rem; }
+
+</style>
+<body>
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+  <div class="logo">
+    <a href="http://zurb.com/stickers/images/intro-foundation.png"><img src="http://zurb.com/stickers/images/intro-foundation.png" /></a>
+  </div>
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="center-buttons">
+      <li class="divider"></li>
+      <li><a href="#">Centered Button</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Centered Button</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Centered Button</a></li>
+      <li class="divider"></li>
+    </ul>
+  </section>
+</nav>
+
+  <h1 style="padding-bottom: 30px">This is the layout</h1>
+  <%== yield %>
+</body>
+</html>
